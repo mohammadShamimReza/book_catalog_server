@@ -4,12 +4,11 @@ export type IBook = {
   title: string
   author: string
   genre: string
-  publication_date: number
-  isbn: string
+  publication_year: number
   description: string
   price: number
   rating: number
-  image: string
+  image?: string
   reviews?: string
 }
 

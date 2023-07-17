@@ -10,6 +10,11 @@ router.post(
   validateRequest(bookValidation.bookZodSchema),
   bookControllar.createBook,
 )
+router.get('/filter', bookControllar.getFilterBooks)
+
 router.get('/', bookControllar.getBooks)
+
+router.patch('/:id', bookControllar.updateBook)
+router.delete('/:id', bookControllar.DeleteBook)
 
 export const bookRoute = router
