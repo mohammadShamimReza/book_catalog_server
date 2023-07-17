@@ -5,3 +5,38 @@ Mon Jul 17 2023 11:37:33 } [CAT-HUT] info: SIGTERM is recived
 Mon Jul 17 2023 11:40:47 } [CAT-HUT] info: Connected to database successfully
 Mon Jul 17 2023 11:40:47 } [CAT-HUT] info: Applistening on port5000
 Mon Jul 17 2023 11:42:8 } [CAT-HUT] info: SIGTERM is recived
+Mon Jul 17 2023 15:18:20 } [CAT-HUT] info: Connected to database successfully
+Mon Jul 17 2023 15:18:20 } [CAT-HUT] info: Applistening on port5000
+Mon Jul 17 2023 15:20:37 } [CAT-HUT] info: SIGTERM is recived
+Mon Jul 17 2023 15:21:17 } [CAT-HUT] info: Connected to database successfully
+Mon Jul 17 2023 15:21:17 } [CAT-HUT] info: Applistening on port5000
+Mon Jul 17 2023 15:22:58 } [CAT-HUT] info: SIGTERM is recived
+Mon Jul 17 2023 15:25:40 } [CAT-HUT] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:25:40 } [CAT-HUT] info: Application  listening on port 5000
+Mon Jul 17 2023 15:29:4 } [CAT-HUT] info: SIGTERM is received
+Mon Jul 17 2023 15:31:47 } [CAT-HUT] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:31:47 } [CAT-HUT] info: Application  listening on port 5000
+Mon Jul 17 2023 15:31:57 } [CAT-HUT] info: SIGTERM is received
+Mon Jul 17 2023 15:34:43 } [CAT-HUT] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:34:43 } [CAT-HUT] info: Application  listening on port 5000
+Mon Jul 17 2023 15:36:18 } [CAT-HUT] info: SIGTERM is received
+Mon Jul 17 2023 15:38:15 } [CAT-HUT] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:38:15 } [CAT-HUT] info: Application  listening on port 5000
+Mon Jul 17 2023 15:42:21 } [CAT-HUT] info: SIGTERM is received
+Mon Jul 17 2023 15:45:6 } [CAT-HUT] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:45:6 } [CAT-HUT] info: Application  listening on port 5000
+Mon Jul 17 2023 15:49:6 } [CAT-HUT] info: SIGTERM is received
+Mon Jul 17 2023 15:50:54 } [CAT-HUT] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:50:54 } [CAT-HUT] info: Application  listening on port 5000
+Mon Jul 17 2023 15:51:34 } [CAT-HUT] info: SIGTERM is received
+Mon Jul 17 2023 15:52:1 } [CAT-HUT] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:52:1 } [CAT-HUT] info: Application  listening on port 5000
+Mon Jul 17 2023 15:53:3 } [CAT-HUT] info: SIGTERM is received
+Mon Jul 17 2023 15:53:15 } [CAT-HUT] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:53:15 } [CAT-HUT] info: Application  listening on port 5000
+Mon Jul 17 2023 15:53:26 } [CAT-HUT] info: SIGTERM is received
+Mon Jul 17 2023 15:54:49 } [Book_catalog] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:54:49 } [Book_catalog] info: Application  listening on port 5000
+Mon Jul 17 2023 15:55:29 } [Book_catalog] info: SIGTERM is received
+Mon Jul 17 2023 15:57:56 } [Book_catalog] info: 🛢   Database is connected successfully
+Mon Jul 17 2023 15:57:56 } [Book_catalog] info: Application  listening on port 5000
