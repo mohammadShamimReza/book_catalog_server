@@ -2,6 +2,7 @@ import { Schema, model } from 'mongoose'
 import { IUser, UserModel } from './user.interface'
 
 export const UserSchema = new Schema<IUser, UserModel>({
+  email: { type: String, required: true, unique: true },
   name: {
     firstName: {
       type: String,
