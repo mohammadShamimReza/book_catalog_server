@@ -16,6 +16,19 @@ const createBook = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+const getBooks = catchAsync(async (req: Request, res: Response) => {
+  const searchBookData = req.query
+  const result = await bookService.getBooks(searchBookData.query)
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'book get successfully',
+    data: result,
+  })
+})
+
 export const bookControllar = {
   createBook,
+  getBooks,
 }
