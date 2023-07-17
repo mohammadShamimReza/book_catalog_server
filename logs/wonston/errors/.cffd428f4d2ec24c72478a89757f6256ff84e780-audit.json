@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/.cffd428f4d2ec24c72478a89757f6256ff84e780-audit.json",
+    "files": [
+        {
+            "date": 1689572250219,
+            "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-17-07-07-error.log",
+            "hash": "dd882b9db149470ff0b12c81f36f7431eb5a0cc102fc54d883ab4df8e17734ca"
+        }
+    ],
+    "hashType": "sha256"
+}
