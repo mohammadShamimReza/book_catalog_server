@@ -1,4 +1,4 @@
-import { Model } from 'mongoose'
+import { Model, Types } from 'mongoose'
 
 export type IBook = {
   title: string
@@ -10,6 +10,7 @@ export type IBook = {
   rating: number
   image?: string
   reviews?: string
+  ownerUser: Types.ObjectId
 }
 
 export type BookModel = Model<IBook, Record<string, unknown>>

@@ -1,9 +1,14 @@
 import httpStatus from 'http-status'
 import ApiError from '../../../errors/ApiError'
+import { User } from '../Users/user.model'
 import { IBook } from './book.interface'
 import { Book } from './book.model'
 
 const createBook = async (bookData: IBook): Promise<IBook | null> => {
+  const ifExists = await User.findById(bookData.ownerUser)
+  if (!ifExists) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'User not found')
+  }
   const result = Book.create(bookData)
   return result
 }

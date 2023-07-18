@@ -10,5 +10,11 @@ export type IUser = {
   address: string
   password: string
 }
-
-export type UserModel = Model<IUser, Record<string, unknown>>
+export type UserModel = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  isUserExist(phone: string): any
+  isPasswordValid(
+    givenPassword: string,
+    savedPassword: string,
+  ): Promise<boolean>
+} & Model<IUser>

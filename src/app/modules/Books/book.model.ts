@@ -12,8 +12,18 @@ const bookSchema = new Schema<IBook>(
     rating: { type: Number, required: true },
     image: { type: String, required: false },
     reviews: { type: String, required: false },
+    ownerUser: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
   },
-  { timestamps: true },
+  {
+    timestamps: true,
+    toJSON: {
+      virtuals: true,
+    },
+  },
 )
 
 export const Book = model<IBook>('Book', bookSchema)
