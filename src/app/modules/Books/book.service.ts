@@ -1,29 +1,54 @@
 import httpStatus from 'http-status'
+import { Secret } from 'jsonwebtoken'
+import config from '../../../config'
 import ApiError from '../../../errors/ApiError'
+import { jwtHelpers } from '../../../helper/jwtHelpers'
 import { User } from '../Users/user.model'
 import { IBook } from './book.interface'
 import { Book } from './book.model'
 
-const createBook = async (bookData: IBook): Promise<IBook | null> => {
-  const ifExists = await User.findById(bookData.ownerUser)
+const createBook = async (
+  bookData: IBook,
+  token: string | undefined,
+): Promise<IBook | null> => {
+  if (!token) {
+    throw new ApiError(httpStatus.UNAUTHORIZED, 'You are not authorized')
+  }
+  const varifyAcctessToken = jwtHelpers.varifyToken(
+    token,
+    config.jwt.secret as Secret,
+  )
+
+  const _id = varifyAcctessToken._id
+
+  const ifExists = await User.findById(_id)
   if (!ifExists) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User not found')
   }
+  console.log(bookData)
+  bookData.ownerUser = _id
   const result = Book.create(bookData)
   return result
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const getBooks = async (searchBookData: string) => {
-  const result = Book.find({
-    $or: [
-      { title: { $regex: searchBookData, $options: 'i' } },
-      { author: { $regex: searchBookData, $options: 'i' } },
-      { genre: { $regex: searchBookData, $options: 'i' } },
-      { publication_date: { $regex: searchBookData, $options: 'i' } },
-    ],
-  })
-  return result
+const getSearchBooks = async (searchBookData: string) => {
+  console.log(typeof searchBookData)
+
+  if (!searchBookData || searchBookData === 'undefined') {
+    const result = Book.find({})
+    return result
+  } else {
+    const result = Book.find({
+      $or: [
+        { title: { $regex: searchBookData, $options: 'i' } },
+        { author: { $regex: searchBookData, $options: 'i' } },
+        { genre: { $regex: searchBookData, $options: 'i' } },
+        { publication_date: { $regex: searchBookData, $options: 'i' } },
+      ],
+    })
+    return result
+  }
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -60,10 +85,28 @@ const deleteBook = async (id: string) => {
   return result
 }
 
+const getAllBooks = async () => {
+  const result = Book.find({})
+  return result
+}
+
+const getTenBooks = async () => {
+  const result = Book.find().sort({ createdAt: -1 }).limit(10)
+  return result
+}
+
+const getSingleBook = async (id: string) => {
+  const result = Book.findById(id)
+  return result
+}
+
 export const bookService = {
   createBook,
-  getBooks,
+  getSearchBooks,
   getFilterBooks,
   updateBook,
   deleteBook,
+  getAllBooks,
+  getTenBooks,
+  getSingleBook,
 }

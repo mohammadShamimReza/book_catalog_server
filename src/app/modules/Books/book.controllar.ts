@@ -6,7 +6,9 @@ import { bookService } from './book.service'
 
 const createBook = catchAsync(async (req: Request, res: Response) => {
   const bookData = req.body
-  const result = await bookService.createBook(bookData)
+  const token = req.headers.authorization
+  console.log(token, 'create book')
+  const result = await bookService.createBook(bookData, token)
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -16,9 +18,11 @@ const createBook = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
-const getBooks = catchAsync(async (req: Request, res: Response) => {
+const getSearchBooks = catchAsync(async (req: Request, res: Response) => {
   const searchBookData = req.query
-  const result = await bookService.getBooks(searchBookData.query as string)
+  const result = await bookService.getSearchBooks(
+    searchBookData.query as string,
+  )
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -65,10 +69,48 @@ const DeleteBook = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+const getAllBooks = catchAsync(async (req: Request, res: Response) => {
+  const result = await bookService.getAllBooks()
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'books get successfully',
+    data: result,
+  })
+})
+
+const getTenBooks = catchAsync(async (req: Request, res: Response) => {
+  const result = await bookService.getTenBooks()
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'book get successfully',
+    data: result,
+  })
+})
+const getSingleBook = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id
+
+  const result = await bookService.getSingleBook(id)
+  console.log(result)
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'single book get successfully',
+    data: result,
+  })
+})
+
 export const bookControllar = {
   createBook,
-  getBooks,
+  getSearchBooks,
   getFilterBooks,
   updateBook,
   DeleteBook,
+  getAllBooks,
+  getTenBooks,
+  getSingleBook,
 }

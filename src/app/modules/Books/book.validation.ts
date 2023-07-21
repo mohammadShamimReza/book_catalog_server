@@ -9,7 +9,7 @@ const bookZodSchema = z.object({
       required_error: 'publication year is required',
     }),
     description: z.string({ required_error: 'description is required' }),
-    price: z.number({ required_error: 'price is required' }),
+    price: z.number({ required_error: 'price is required' }).optional(),
     rating: z.number({ required_error: 'rating is required' }).optional(),
     image: z.string({ required_error: 'image is required' }).optional(),
     reviews: z.string().optional(),

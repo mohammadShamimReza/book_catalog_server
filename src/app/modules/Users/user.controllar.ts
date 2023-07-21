@@ -8,6 +8,7 @@ import { UserService } from './user.service'
 const createUser: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const userData = req.body
+    console.log(userData)
     const result = await UserService.createStudent(userData)
 
     sendResponse<IUser>(res, {

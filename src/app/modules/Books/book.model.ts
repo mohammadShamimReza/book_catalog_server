@@ -8,8 +8,8 @@ const bookSchema = new Schema<IBook>(
     genre: { type: String, required: true },
     publication_year: { type: Number, required: true },
     description: { type: String, required: true },
-    price: { type: Number, required: true },
-    rating: { type: Number, required: true },
+    price: { type: Number, required: false },
+    rating: { type: Number, required: false },
     image: { type: String, required: false },
     reviews: { type: String, required: false },
     ownerUser: {

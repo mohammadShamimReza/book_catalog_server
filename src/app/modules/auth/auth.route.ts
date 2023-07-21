@@ -15,10 +15,6 @@ router.post(
   validateRequest(authValidation.refreshTokenZodSchema),
   AuthController.refreshToken,
 )
-router.post(
-  '/logout',
-  validateRequest(authValidation.refreshTokenZodSchema),
-  AuthController.logOut,
-)
+router.post('/logout', AuthController.logOut)
 
 export const AuthRoute = router

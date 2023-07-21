@@ -7,9 +7,9 @@ import { User } from '../Users/user.model'
 import { IUserLogin } from './auth.interface'
 
 const loginUser = async (LoginData: IUserLogin) => {
-  const { phone, password } = LoginData
+  const { email, password } = LoginData
 
-  const isUserExist = await User.isUserExist(phone)
+  const isUserExist = await User.isUserExist(email)
   if (!isUserExist) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User not found')
   }

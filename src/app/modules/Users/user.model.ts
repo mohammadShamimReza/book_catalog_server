@@ -6,14 +6,8 @@ import { IUser, UserModel } from './user.interface'
 export const UserSchema = new Schema<IUser, UserModel>({
   email: { type: String, required: true, unique: true },
   name: {
-    firstName: {
-      type: String,
-      required: true,
-    },
-    lastName: {
-      type: String,
-      required: true,
-    },
+    type: String,
+    required: true,
   },
   phone: {
     type: String,
@@ -31,8 +25,8 @@ export const UserSchema = new Schema<IUser, UserModel>({
   },
 })
 
-UserSchema.statics.isUserExist = async function (phone: string) {
-  return await User.findOne({ phone }, { _id: 1, password: 1 })
+UserSchema.statics.isUserExist = async function (email: string) {
+  return await User.findOne({ email }, { _id: 1, password: 1, email: 1 })
 }
 UserSchema.statics.isPasswordValid = async function (
   givenPassword: string,

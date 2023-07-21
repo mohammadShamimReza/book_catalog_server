@@ -1,20 +1,20 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "/home/msh/Documents/assaginment/book_catalog/book_catalog_server/logs/wonston/successes/.91f48cc083669deadfe4735a5004570f6c87e2f8-audit.json",
+  "files": [
+    {
+      "date": 1689615114276,
+      "name": "/home/msh/Documents/assaginment/book_catalog/book_catalog_server/logs/wonston/successes/dch-2023-17-07-07-success.log",
+      "hash": "20a6c1e3c2453d66ac4ce04278e7b53dbf5e9f263d8787a06c114d0d911a0626"
     },
-    "auditLog": "/home/msh/Documents/assaginment/book_catalog/book_catalog_server/logs/wonston/successes/.91f48cc083669deadfe4735a5004570f6c87e2f8-audit.json",
-    "files": [
-        {
-            "date": 1689615114276,
-            "name": "/home/msh/Documents/assaginment/book_catalog/book_catalog_server/logs/wonston/successes/dch-2023-17-07-07-success.log",
-            "hash": "20a6c1e3c2453d66ac4ce04278e7b53dbf5e9f263d8787a06c114d0d911a0626"
-        },
-        {
-            "date": 1689617118745,
-            "name": "/home/msh/Documents/assaginment/book_catalog/book_catalog_server/logs/wonston/successes/dch-2023-18-07-07-success.log",
-            "hash": "3af76d15ce22cebc22c88f6eb05ab5827f8785f25cd690cef69062cdcc816468"
-        }
-    ],
-    "hashType": "sha256"
+    {
+      "date": 1689617118745,
+      "name": "/home/msh/Documents/assaginment/book_catalog/book_catalog_server/logs/wonston/successes/dch-2023-18-07-07-success.log",
+      "hash": "3af76d15ce22cebc22c88f6eb05ab5827f8785f25cd690cef69062cdcc816468"
+    }
+  ],
+  "hashType": "sha256"
 }

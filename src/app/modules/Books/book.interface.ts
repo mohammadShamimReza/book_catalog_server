@@ -6,8 +6,8 @@ export type IBook = {
   genre: string
   publication_year: number
   description: string
-  price: number
-  rating: number
+  price?: number
+  rating?: number
   image?: string
   reviews?: string
   ownerUser: Types.ObjectId

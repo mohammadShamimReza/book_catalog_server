@@ -2,7 +2,7 @@ import { z } from 'zod'
 
 const loginZodSchema = z.object({
   body: z.object({
-    phone: z.string({ required_error: 'phoneNumber is required' }),
+    email: z.string({ required_error: 'email is required' }),
     password: z.string({ required_error: 'password is required' }),
   }),
 })

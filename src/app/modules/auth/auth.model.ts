@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose'
 import { IUserLogin } from './auth.interface'
 
 const authSchema = new Schema<IUserLogin>({
-  phone: { type: String, required: true, unique: true },
+  email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
 })
 
