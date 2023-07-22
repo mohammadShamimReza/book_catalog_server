@@ -29,6 +29,11 @@
             "date": 1689898145095,
             "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-21-07-07-error.log",
             "hash": "78e714d5ecc28334dacfb42eb762c5bbd3d04557a9c7677977a69522ca771873"
+        },
+        {
+            "date": 1690004954629,
+            "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-22-07-07-error.log",
+            "hash": "22efbdedf83588cae3d8f7865eeaf9320fc2f3dbba521b8c5006f2ccaf620928"
         }
     ],
     "hashType": "sha256"

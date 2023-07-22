@@ -16,6 +16,9 @@ router.get('/filter', bookControllar.getFilterBooks)
 
 router.get('/search', bookControllar.getSearchBooks)
 router.get('/tenBook', bookControllar.getTenBooks)
+router.post('/reviews/:id', bookControllar.postBookReview)
+
+router.get('/reviews/:id', bookControllar.getBookReview)
 
 router.get('/:id', bookControllar.getSingleBook)
 

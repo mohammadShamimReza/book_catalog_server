@@ -9,7 +9,6 @@ const auth = () => async (req: Request, res: Response, next: NextFunction) => {
   try {
     const token = req.headers.authorization
     const { refreshToken } = req.cookies
-    console.log(token, refreshToken)
     if (!token) {
       throw new ApiError(httpStatus.UNAUTHORIZED, 'You are not authorized')
     }

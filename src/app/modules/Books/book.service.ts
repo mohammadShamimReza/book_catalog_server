@@ -25,7 +25,6 @@ const createBook = async (
   if (!ifExists) {
     throw new ApiError(httpStatus.NOT_FOUND, 'User not found')
   }
-  console.log(bookData)
   bookData.ownerUser = _id
   const result = Book.create(bookData)
   return result
@@ -33,8 +32,6 @@ const createBook = async (
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const getSearchBooks = async (searchBookData: string) => {
-  console.log(typeof searchBookData)
-
   if (!searchBookData || searchBookData === 'undefined') {
     const result = Book.find({})
     return result
@@ -53,7 +50,6 @@ const getSearchBooks = async (searchBookData: string) => {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const getFilterBooks = async (filterBookData: any) => {
-  console.log(filterBookData)
   const result = Book.find({
     $and: Object.entries(filterBookData).map(([field, value]) => ({
       [field]: value,
@@ -100,6 +96,20 @@ const getSingleBook = async (id: string) => {
   return result
 }
 
+const postBookReview = async (id: string, review: string) => {
+  const result = Book.findByIdAndUpdate(
+    { _id: id },
+    { $push: { reviews: review } },
+    { upsert: true, new: true },
+  )
+  return result
+}
+
+const getBookReview = async (id: string) => {
+  const result = Book.findById({ _id: id })
+  return result
+}
+
 export const bookService = {
   createBook,
   getSearchBooks,
@@ -109,4 +119,6 @@ export const bookService = {
   getAllBooks,
   getTenBooks,
   getSingleBook,
+  postBookReview,
+  getBookReview,
 }

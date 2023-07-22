@@ -11,7 +11,7 @@ const bookSchema = new Schema<IBook>(
     price: { type: Number, required: false },
     rating: { type: Number, required: false },
     image: { type: String, required: false },
-    reviews: { type: String, required: false },
+    reviews: { type: [String], required: false },
     ownerUser: {
       type: Schema.Types.ObjectId,
       ref: 'User',

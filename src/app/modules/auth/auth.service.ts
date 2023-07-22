@@ -21,8 +21,6 @@ const loginUser = async (LoginData: IUserLogin) => {
     throw new ApiError(httpStatus.NOT_FOUND, 'Password not valid')
   }
 
-  console.log(isUserExist)
-
   const { _id } = isUserExist
   const accessToken = jwtHelpers.createToken(
     { _id },

@@ -7,7 +7,6 @@ import { bookService } from './book.service'
 const createBook = catchAsync(async (req: Request, res: Response) => {
   const bookData = req.body
   const token = req.headers.authorization
-  console.log(token, 'create book')
   const result = await bookService.createBook(bookData, token)
 
   sendResponse(res, {
@@ -60,6 +59,7 @@ const updateBook = catchAsync(async (req: Request, res: Response) => {
 const DeleteBook = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id
   const result = await bookService.deleteBook(id)
+  console.log(result, id)
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -94,12 +94,36 @@ const getSingleBook = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id
 
   const result = await bookService.getSingleBook(id)
-  console.log(result)
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'single book get successfully',
+    data: result,
+  })
+})
+
+const postBookReview = catchAsync(async (req: Request, res: Response) => {
+  const bookId = req.params.id
+  const review = req.body.review
+  const result = await bookService.postBookReview(bookId, review)
+  console.log(result, 'this is post')
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'book review successfully',
+    data: result,
+  })
+})
+
+const getBookReview = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id
+  const result = await bookService.getBookReview(id)
+  // console.log(result, 'result')
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'get book review successfully',
     data: result,
   })
 })
@@ -113,4 +137,6 @@ export const bookControllar = {
   getAllBooks,
   getTenBooks,
   getSingleBook,
+  postBookReview,
+  getBookReview,
 }

@@ -1,0 +1,2 @@
+Fri Jul 21 2023 19:51:0 } [Book_catalog] error: write EIO
+Fri Jul 21 2023 22:25:34 } [Book_catalog] error: Failed to connect database querySrv ESERVFAIL _mongodb._tcp.cluster0.7hla3w5.mongodb.net

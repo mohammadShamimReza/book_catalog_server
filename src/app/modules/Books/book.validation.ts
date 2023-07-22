@@ -12,7 +12,7 @@ const bookZodSchema = z.object({
     price: z.number({ required_error: 'price is required' }).optional(),
     rating: z.number({ required_error: 'rating is required' }).optional(),
     image: z.string({ required_error: 'image is required' }).optional(),
-    reviews: z.string().optional(),
+    reviews: z.array(z.string()).optional(),
     ownerUser: z.string({ required_error: 'ownerUser is required' }),
   }),
 })

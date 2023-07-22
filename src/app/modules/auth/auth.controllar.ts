@@ -15,8 +15,7 @@ const loginUser = catchAsync(async (req: Request, res: Response) => {
     httpOnly: true,
   }
 
-  const coo = res.cookie('refreshToken', refreshToken, cookieOption)
-  console.log(coo)
+  res.cookie('refreshToken', refreshToken, cookieOption)
 
   sendResponse(res, {
     success: true,
