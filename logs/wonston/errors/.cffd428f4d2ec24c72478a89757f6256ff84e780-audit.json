@@ -1,40 +1,40 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/.cffd428f4d2ec24c72478a89757f6256ff84e780-audit.json",
+  "files": [
+    {
+      "date": 1689572250219,
+      "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-17-07-07-error.log",
+      "hash": "dd882b9db149470ff0b12c81f36f7431eb5a0cc102fc54d883ab4df8e17734ca"
     },
-    "auditLog": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/.cffd428f4d2ec24c72478a89757f6256ff84e780-audit.json",
-    "files": [
-        {
-            "date": 1689572250219,
-            "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-17-07-07-error.log",
-            "hash": "dd882b9db149470ff0b12c81f36f7431eb5a0cc102fc54d883ab4df8e17734ca"
-        },
-        {
-            "date": 1689653608349,
-            "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-18-07-07-error.log",
-            "hash": "ae7a61ff998ae8102e21a09c51f741fe805c02b8bd5b5c2ace95974370013916"
-        },
-        {
-            "date": 1689742616663,
-            "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-19-07-07-error.log",
-            "hash": "ce76465bc2dcb7c8ab85ec87aae23218fe8701cf64ef6c4bdfcdf3396c69c59e"
-        },
-        {
-            "date": 1689848402564,
-            "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-20-07-07-error.log",
-            "hash": "87df5b0ed8e690ddaaa48a1b1a3b1caa4056c89bac985eef2170572434345ba7"
-        },
-        {
-            "date": 1689898145095,
-            "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-21-07-07-error.log",
-            "hash": "78e714d5ecc28334dacfb42eb762c5bbd3d04557a9c7677977a69522ca771873"
-        },
-        {
-            "date": 1690004954629,
-            "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-22-07-07-error.log",
-            "hash": "22efbdedf83588cae3d8f7865eeaf9320fc2f3dbba521b8c5006f2ccaf620928"
-        }
-    ],
-    "hashType": "sha256"
+    {
+      "date": 1689653608349,
+      "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-18-07-07-error.log",
+      "hash": "ae7a61ff998ae8102e21a09c51f741fe805c02b8bd5b5c2ace95974370013916"
+    },
+    {
+      "date": 1689742616663,
+      "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-19-07-07-error.log",
+      "hash": "ce76465bc2dcb7c8ab85ec87aae23218fe8701cf64ef6c4bdfcdf3396c69c59e"
+    },
+    {
+      "date": 1689848402564,
+      "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-20-07-07-error.log",
+      "hash": "87df5b0ed8e690ddaaa48a1b1a3b1caa4056c89bac985eef2170572434345ba7"
+    },
+    {
+      "date": 1689898145095,
+      "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-21-07-07-error.log",
+      "hash": "78e714d5ecc28334dacfb42eb762c5bbd3d04557a9c7677977a69522ca771873"
+    },
+    {
+      "date": 1690004954629,
+      "name": "/home/msh/Documents/developement/assaginment/book_catalog/book_catalog_server/logs/wonston/errors/dch-2023-22-07-07-error.log",
+      "hash": "22efbdedf83588cae3d8f7865eeaf9320fc2f3dbba521b8c5006f2ccaf620928"
+    }
+  ],
+  "hashType": "sha256"
 }
