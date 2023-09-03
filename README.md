@@ -17,4 +17,3 @@
 - noSql
 - Mongoose
 
-## API
